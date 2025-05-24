@@ -9,24 +9,24 @@ body {
 }
 
 .gif-container {
+  display: grid;
+  place-items: center;
   position: relative;
-  display: inline-block;
 }
 
-#gif {
-  max-width: 90vw;
-  max-height: 80vh;
-  display: block;
+.gif-container img {
+  grid-area: 1 / 1;
 }
 
 .buttons {
-  position: absolute;
-  bottom: 108px;
-  left: 50%;
-  transform: translateX(-62%);
+  margin-right: 23px;
+  margin-top: 293px;
+  grid-area: 1 / 1;
   display: flex;
-  gap: 24px;
+  gap: 1rem;
+  z-index: 1;
 }
+
 
 button {
   position: relative;
@@ -34,8 +34,8 @@ button {
   background-color: #e5b87b;
   color: black;
   border: none;
-  border-radius: 6px;
-  font-size: 20px;
+  border-radius: 4px;
+  font-size: 43px;
   font-weight: 500;
   cursor: pointer;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
@@ -81,37 +81,3 @@ button:active::after {
 #preloader {
   display: none;
 }
-
-@media (max-width: 768px) {
-  .gif-container {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-  }
-
-  #gif,
-  #preloader {
-    position: absolute;
-    top: 500px;
-    left: 0;
-    width: 103vw;
-    height: 43vh;
-    max-width: none;
-    max-height: none;
-    object-fit: cover;
-    object-position: center;
-  }
-  button {
-    font-size: 40px;
-    }
-  .buttons {
-    position: absolute;
-    bottom: 560px;
-    left: 50%;
-    transform: translateX(-53%);
-    display: flex;
-    gap: 29px;
-    }
-}
-
