@@ -81,3 +81,37 @@ button:active::after {
 #preloader {
   display: none;
 }
+
+@media (max-width: 768px) {
+  .gif-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  #gif,
+  #preloader {
+    position: absolute;
+    top: 500px;
+    left: 0;
+    width: 103vw;
+    height: 43vh;
+    max-width: none;
+    max-height: none;
+    object-fit: cover;
+    object-position: center;
+  }
+  button {
+    font-size: 40px;
+    }
+  .buttons {
+    position: absolute;
+    bottom: 560px;
+    left: 50%;
+    transform: translateX(-53%);
+    display: flex;
+    gap: 29px;
+    }
+}
+
