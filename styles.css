@@ -6,6 +6,11 @@ body {
   justify-content: center;
   align-items: center;
   font-family: 'Roboto', sans-serif;
+  flex-direction: column;
+}
+
+.mobile-only-image {
+  display: none;
 }
 
 .gif-container {
@@ -100,11 +105,18 @@ button:active::after {
 
 /* Ajustes para celulares */
 @media (max-width: 768px) {
+  .mobile-header {
+    display: block;
+    position: absolute;
+    transform: translateY(-153%);
+    width: 50%;               /* escala responsivo */
+  }
   #gif {
     width: 100vw;
     max-width: none;
   }
   .gif-container {
+    overflow: visible; /* para que no corte la cabecera */
     width: 100vw;
     margin: 0 auto;
   }
