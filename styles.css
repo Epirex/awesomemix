@@ -81,3 +81,18 @@ button:active::after {
 #preloader {
   display: none;
 }
+
+/* Ajustes para celulares */
+@media (max-width: 768px) {
+  #gif {
+    width: 100vw;
+    max-width: none;
+  }
+  .gif-container {
+    width: 100vw;
+    margin: 0 auto;
+  }
+  .buttons {
+    margin-top: 266px;
+  }
+}
