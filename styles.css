@@ -109,14 +109,14 @@ button:active::after {
     display: block;
     position: absolute;
     transform: translateY(-153%);
-    width: 50%;               /* escala responsivo */
+    width: 50%;
   }
   #gif {
     width: 100vw;
     max-width: none;
   }
   .gif-container {
-    overflow: visible; /* para que no corte la cabecera */
+    overflow: visible;
     width: 100vw;
     margin: 0 auto;
   }
