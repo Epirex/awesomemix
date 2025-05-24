@@ -82,6 +82,22 @@ button:active::after {
   display: none;
 }
 
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #ccc;
+  background: transparent;
+  pointer-events: none;
+  z-index: 100;
+  font-family: 'Roboto', sans-serif;
+}
+
+
 /* Ajustes para celulares */
 @media (max-width: 768px) {
   #gif {
@@ -93,6 +109,6 @@ button:active::after {
     margin: 0 auto;
   }
   .buttons {
-    transform: translate(5%, -123%);
+    transform: translate(4%, -120%);
   }
 }
