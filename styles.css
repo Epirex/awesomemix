@@ -93,6 +93,6 @@ button:active::after {
     margin: 0 auto;
   }
   .buttons {
-    margin-top: 266px;
+    transform: translate(5%, -123%);
   }
 }
