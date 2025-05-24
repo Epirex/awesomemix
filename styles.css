@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  background-color: #2e1f1c;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.gif-container {
+  position: relative;
+  display: inline-block;
+}
+
+#gif {
+  max-width: 90vw;
+  max-height: 80vh;
+  display: block;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 108px;
+  left: 50%;
+  transform: translateX(-62%);
+  display: flex;
+  gap: 24px;
+}
+
+button {
+  position: relative;
+  overflow: hidden;
+  background-color: #e5b87b;
+  color: black;
+  border: none;
+  border-radius: 6px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+button:hover {
+  background-color: #9a6938;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+button:focus {
+  outline: none;
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(0);
+  opacity: 0;
+  pointer-events: none;
+  animation: ripple 0.6s linear;
+}
+
+button:active::after {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+@keyframes ripple {
+  to {
+    transform: translate(-50%, -50%) scale(2.5);
+    opacity: 0;
+  }
+}
+
+#preloader {
+  display: none;
+}
